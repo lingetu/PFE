@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c430d247-a82c-4447-ad12-a29a39c23ca4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/PFE/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PFE/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PFE/modelisation/OpenGL.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PFE/modelisation/OpenGL.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PFE/statistiques.csv" beforeDir="false" afterPath="$PROJECT_DIR$/PFE/statistiques.csv" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1saRHp8RQy2T5Xs6cQxIp7FXkde" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c430d247-a82c-4447-ad12-a29a39c23ca4" name="Default Changelist" comment="" />
+      <created>1621108628448</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621108628448</updated>
+    </task>
+    <servers />
+  </component>
+</project>
