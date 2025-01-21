@@ -114,6 +114,10 @@ int main(int argc, char** argv) {
         float long12, long03, long01, long23, ratio = 0;
         EdgeDetection ED = EdgeDetection(currentFrame, true);       //detecte les bords du labyrinthe
         vector<Point2i> coordCorner = ED.getCorner(currentFrame);   //recupere les angles du labyrinthe (ca doit forcement etre un carre/rectangle, pas n'importe quel quadrilatere)
+        for (const auto &corner : coordCorner)
+        {
+            circle(currentFrame, corner, 5, Scalar(0, 255, 0), -1); // Dessiner un cercle vert aux coins détectés
+        }
 
         /*
         * coordCorner[0] en haut a gauche  (normalement)
@@ -140,21 +144,23 @@ int main(int argc, char** argv) {
 
         //dans le cas ou un des 2 hypotenuse est significativement plus long que lautre, on va calculer la distance entre les 2 points du haut (0 et 1), et du bas (2 et 3), puis on va calculer le ratio du segment du haut sur le segment du bas
         if (long03 > long12 * 0.9 && long03 < long12 * 1.1) {
-            long01 = sqrt(pow(coordCorner[0].x - coordCorner[1].x, 2) + pow(coordCorner[0].y - coordCorner[1].y, 2));
-            long23 = sqrt(pow(coordCorner[2].x - coordCorner[3].x, 2) + pow(coordCorner[2].y - coordCorner[3].y, 2));
-            ratio = long01 / long23;
-        }
+    // Calcul des longueurs des segments horizontaux
+    long01 = sqrt(pow(coordCorner[0].x - coordCorner[1].x, 2) + pow(coordCorner[0].y - coordCorner[1].y, 2));
+    long23 = sqrt(pow(coordCorner[2].x - coordCorner[3].x, 2) + pow(coordCorner[2].y - coordCorner[3].y, 2));
+    // Calcul du ratio des longueurs des segments horizontaux
+    ratio = long01 / long23;
+}
         //on considere que la feuille est correctement inclinee ssi le ratio est compris entre 0.73 et 0.8
-        bool is45 = ratio > 0.73 && ratio < 0.8;
+        bool is45 = ratio > 0.7 && ratio < 0.9;
 
-        if (ratio > 0.73 && ratio < 0.8) {
-
-        }
-        else if (ratio < 0.8) {
+        if (!is45) {
+        
+         if (ratio < 0.7 ) {
             putText(currentFrame, "Inclinaison trop horizontale", Point2i((currentFrame.cols - textSize4.width) / 2, currentFrame.rows - 100), FONT_HERSHEY_PLAIN, 2, Scalar(0, 0, 255), 2);
         }
-        else if (ratio > 0.73) {
+        else if (ratio > 0.9) {
             putText(currentFrame, "Inclinaison trop verticale", Point2i((currentFrame.cols - textSize5.width) / 2, currentFrame.rows - 100), FONT_HERSHEY_PLAIN, 2, Scalar(0, 0, 255), 2);
+        }
         }
 
 

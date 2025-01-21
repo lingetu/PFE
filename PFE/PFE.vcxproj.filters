@@ -57,6 +57,9 @@
     <ClCompile Include="database\Bdd.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="YOLO\YOLOUtils.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="analyse\EdgeDetection.h">
@@ -98,5 +101,12 @@
     <ClInclude Include="database\Bdd.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="YOLO\YOLOutils.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="yoloMod\yolov3-tiny.cfg" />
+    <None Include="yoloMod\yolov3-tiny.weights" />
   </ItemGroup>
 </Project>

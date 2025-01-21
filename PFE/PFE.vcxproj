@@ -35,6 +35,7 @@
     <ClCompile Include="physics\Wall.cpp" />
     <ClCompile Include="stream\CameraStream.cpp" />
     <ClCompile Include="writing\CSVWriter.cpp" />
+    <ClCompile Include="YOLO\YOLOUtils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="analyse\EdgeDetection.h" />
@@ -52,6 +53,11 @@
     <ClInclude Include="physics\Wall.h" />
     <ClInclude Include="stream\CameraStream.h" />
     <ClInclude Include="writing\CSVWriter.h" />
+    <ClInclude Include="YOLO\YOLOutils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="yoloMod\yolov3-tiny.cfg" />
+    <None Include="yoloMod\yolov3-tiny.weights" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
